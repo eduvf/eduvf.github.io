@@ -6,6 +6,7 @@ $breakpoint-sm: 600px;
 
 @import 'pentagrama';
 @import 'gallery';
+@import 'about';
 
 html {
   background-color: $navy;
@@ -76,7 +77,7 @@ header figure {
         color: $yellow;
       }
       :nth-child(2) {
-        color: $fuchsia;
+        color: $red;
       }
       :nth-child(3) {
         color: $lime;
@@ -135,15 +136,12 @@ section {
     color: $navy;
     background-color: $yellow;
   }
-  &.about {
-    background-color: $green;
-  }
 }
 
 article {
   max-width: $breakpoint-lg;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 1rem;
 }
 
 img {
@@ -151,8 +149,8 @@ img {
 }
 
 footer {
-  background-color: $maroon;
+  border-top: 1px solid $maroon;
   color: $silver;
-  padding: 2rem;
+  padding: 3rem;
   text-align: center;
 }

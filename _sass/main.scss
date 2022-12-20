@@ -13,64 +13,92 @@ html {
 }
 
 header figure {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  @media (max-width: $breakpoint-lg) {
-    flex-direction: column;
-    gap: 0;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+    gap: 1rem;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+      opacity: 0.5;
+    }
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-weight: 500;
+      @media (max-width: $breakpoint-lg) {
+        text-align: center;
+      }
+    }
+  }
+  &.home a {
+    gap: 3rem;
+    @media (max-width: $breakpoint-lg) {
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
-  img {
+  a img {
+    width: 3rem;
+  }
+  &.home a img {
     width: 8rem;
     @media (max-width: $breakpoint-lg) {
       width: 5rem;
     }
   }
 
-  h1,
-  h2,
-  h3 {
-    margin: 0;
-    font-weight: 500;
-    @media (max-width: $breakpoint-lg) {
-      text-align: center;
+  a div {
+    h1 {
+      font-size: 2rem;
+      color: $white;
+      span {
+        font-weight: 100;
+      }
+    }
+    h2,
+    h3 {
+      display: none;
     }
   }
-  h1 {
-    font-size: 4rem;
-    color: $white;
-    span {
-      font-weight: 100;
+  &.home a div {
+    h1 {
+      font-size: 4rem;
     }
-  }
-  h2 {
-    :nth-child(1) {
-      color: $yellow;
+    h2 {
+      display: block;
+      :nth-child(1) {
+        color: $yellow;
+      }
+      :nth-child(2) {
+        color: $fuchsia;
+      }
+      :nth-child(3) {
+        color: $lime;
+      }
     }
-    :nth-child(2) {
-      color: $fuchsia;
+    h3 {
+      display: block;
+      color: $silver;
     }
-    :nth-child(3) {
-      color: $lime;
-    }
-  }
-  h3 {
-    color: $silver;
   }
 }
 
 nav {
-  position: sticky;
-  top: 0;
   max-width: $breakpoint-lg;
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   a {
     text-decoration: none;
+    &.current {
+      text-decoration: underline;
+    }
     transition: 0.5s;
     padding: 1rem;
     font-weight: bold;
@@ -79,22 +107,17 @@ nav {
         display: none;
       }
     }
-
-    $color-item-1: $yellow;
-    $color-item-2: $lime;
-    $color-item-3: $fuchsia;
-    $color-item-4: $orange;
     &:nth-child(1) {
-      color: $color-item-1;
+      color: $yellow;
     }
     &:nth-child(2) {
-      color: $color-item-2;
+      color: $lime;
     }
     &:nth-child(3) {
-      color: $color-item-3;
+      color: $orange;
     }
     &:nth-child(4) {
-      color: $color-item-4;
+      color: $teal;
     }
     &:hover {
       color: $blue;
@@ -117,8 +140,19 @@ section {
   }
 }
 
+article {
+  max-width: $breakpoint-lg;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+img {
+  max-width: 100%;
+}
+
 footer {
   background-color: $maroon;
+  color: $silver;
   padding: 2rem;
   text-align: center;
 }

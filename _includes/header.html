@@ -1,0 +1,35 @@
+<header>
+  <figure class="{% if page.layout == 'home' %}home{% endif %}">
+    <a href="/">
+      <img src="/assets/logo.svg" alt="" />
+      <div>
+        <h1><span>e</span><span>d</span><span>u</span><b>v</b><i>f</i></h1>
+        <h3>eduard vallmitjana fauró</h3>
+        <h2>
+          <span>composer</span>
+          <span>&</span>
+          <span>programmer</span>
+        </h2>
+      </div>
+    </a>
+  </figure>
+
+  <div class="pentagrama">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <nav>
+    {% for item in site.data.menu %}
+    <a href="{{ item.url }}" class="{% if page.title == item.title %}current{% endif %}">
+      <svg class="feather">
+        <use href="/assets/feather-sprite.svg#{{ item.icon }}" />
+      </svg>
+      <span>{{ item.title }}</span>
+    </a>
+    {% endfor %}
+  </nav>
+</header>

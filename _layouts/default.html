@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="/assets/css/style.css" />
-	</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<body>
-		<header></header>
+    <link rel="stylesheet" href="https://unpkg.com/sanitize.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/open-sans.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
 
-		<main>{{ content }}</main>
+    <title>EduVF &mdash; {{ page.title }}</title>
+  </head>
 
-		<footer></footer>
-	</body>
+  <body>
+    <header>
+      <figure>
+        <img src="/assets/logo.svg" alt="" />
+        <div>
+          <h1><span>e</span><span>d</span><span>u</span><b>v</b><i>f</i></h1>
+          <h3>eduard vallmitjana fauro</h3>
+          <h2>
+            <span>composer</span>
+            <span>&</span>
+            <span>programmer</span>
+          </h2>
+        </div>
+      </figure>
+
+      {% include pentagrama.html %}
+
+      <nav>
+        {% for item in site.data.menu %}
+        <a href="{{ item.url }}" class="{% if page.title == item.title %}current{% endif %}">
+          <svg class="feather">
+            <use href="/assets/feather-sprite.svg#{{ item.icon }}" />
+          </svg>
+          <span>{{ item.title }}</span>
+        </a>
+        {% endfor %}
+      </nav>
+    </header>
+
+    <main>{{ content }}</main>
+
+    <footer>
+      <span>asdflkjsadlfkjhasdf</span>
+    </footer>
+  </body>
 </html>

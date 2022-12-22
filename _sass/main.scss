@@ -11,6 +11,10 @@ $breakpoint-sm: 600px;
 html {
   background-color: $navy;
   font-family: 'Open Sans', sans-serif;
+  color: $white;
+  a {
+    color: $yellow;
+  }
 }
 
 header figure {

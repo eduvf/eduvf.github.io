@@ -1,0 +1,16 @@
+<ul class="gallery">
+  {% for post in site.posts %} {% if forloop.index < 7 %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <time>{{ post.date | date_to_long_string }}</time>
+      <h3>{{ post.title }}</h3>
+      <h5>{{ post.desc }}</h5>
+    </a>
+  </li>
+  {% endif %} {% endfor %}
+  <li>
+    <a href="#">
+      <h3>MORE PROJECTS</h3>
+    </a>
+  </li>
+</ul>

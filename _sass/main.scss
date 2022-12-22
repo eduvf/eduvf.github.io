@@ -103,9 +103,10 @@ nav {
     transition: 0.5s;
     padding: 1rem;
     font-weight: bold;
-    span {
-      @media (max-width: $breakpoint-sm) {
-        display: none;
+    @media (max-width: $breakpoint-sm) {
+      text-align: center;
+      span {
+        display: block;
       }
     }
     &:nth-child(1) {
@@ -150,7 +151,12 @@ img {
 
 footer {
   border-top: 1px solid $maroon;
+  img {
+    width: 100%;
+    max-width: $breakpoint-lg;
+    // margin-bottom: 2rem;
+  }
   color: $silver;
-  padding: 3rem;
+  padding: 2rem 0;
   text-align: center;
 }

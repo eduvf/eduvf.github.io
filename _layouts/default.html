@@ -18,6 +18,9 @@
     <main>{{ content }}</main>
 
     <footer>
+      {% if page.url != "/" %}
+      <a href="/">return to home</a>
+      {% endif %}
       <p>&copy; {{ site.time | date: "%Y" }} &mdash; EduVF</p>
       <img src="/assets/overtones-graphic.svg" alt="" />
     </footer>

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<section>
+  <h2>{{ page.title }}</h2>
+  <article>
+    <p>{{ content }}</p>
+    <ul class="list">
+      {% for post in site.posts %} {% if post.tag == page.title %}
+      <li>
+        <a href="{{ post.url | relative_url }}">
+          <time>{{ post.date | date_to_long_string }}</time>
+          <h3>{{ post.title }}</h3>
+          <h5>{{ post.desc }}</h5>
+        </a>
+      </li>
+      {% endif %} {% endfor %}
+    </ul>
+  </article>
+</section>

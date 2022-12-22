@@ -1,15 +1,15 @@
 - title: music
   icon: music
-  url:
+  url: /music.html
 
 - title: tech
   icon: code
-  url:
+  url: /technology.html
 
 - title: bio
   icon: user
-  url: /bio
+  url: /biography.html
 
 - title: contact
   icon: share-2
-  url:
+  url: /contact.html

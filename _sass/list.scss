@@ -1,0 +1,51 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+  li {
+    margin: 2rem 0;
+    padding: 0;
+    a {
+      display: block;
+      padding: 2rem 1rem;
+      transition: 0.5s;
+      text-decoration: none;
+      &:hover {
+        color: $blue;
+        text-decoration: underline;
+      }
+      time,
+      h3,
+      h5 {
+        margin: 0;
+      }
+    }
+    border: 1px solid $white;
+    &:nth-child(1) {
+      border-color: $red;
+    }
+    &:nth-child(2) {
+      border-color: $orange;
+    }
+    &:nth-child(3) {
+      border-color: $yellow;
+    }
+    &:nth-child(4) {
+      border-color: $lime;
+    }
+    &:nth-child(5) {
+      border-color: $teal;
+    }
+    &:nth-child(6) {
+      border-color: $blue;
+    }
+    &:nth-child(7) {
+      border-color: $fuchsia;
+    }
+    &:nth-child(8) {
+      border-color: $red;
+    }
+    &:nth-child(9) {
+      border-color: $orange;
+    }
+  }
+}

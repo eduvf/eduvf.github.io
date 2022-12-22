@@ -24,7 +24,7 @@
 
   <nav>
     {% for item in site.data.menu %}
-    <a href="{{ item.url }}" class="{% if page.title == item.title %}current{% endif %}">
+    <a href="{{ item.url }}" class="{% if page.url == item.url %}current{% endif %}">
       <svg class="feather">
         <use href="/assets/feather-sprite.svg#{{ item.icon }}" />
       </svg>

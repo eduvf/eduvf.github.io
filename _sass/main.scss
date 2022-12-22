@@ -6,6 +6,7 @@ $breakpoint-sm: 600px;
 
 @import 'pentagrama';
 @import 'gallery';
+@import 'list';
 @import 'about';
 
 html {
@@ -14,6 +15,12 @@ html {
   color: $white;
   a {
     color: $yellow;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: $breakpoint-lg / 2;
+    width: 100%;
   }
 }
 

@@ -6,4 +6,6 @@ tag: technology
 img: /assets/img/lluna.png
 ---
 
+More info [here](https://eduvf.github.io/lluna/).
+
 ![](/assets/img/lluna.png)

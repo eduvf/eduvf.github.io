@@ -8,11 +8,11 @@ layout: default
     <p>{{ content }}</p>
     <ul class="list">
       {% for post in site.posts %} {% if post.tag == page.title %}
-      <li>
+      <li style="background-image: url('{{ post.img }}')">
         <a href="{{ post.url | relative_url }}">
-          <time>{{ post.date | date_to_long_string }}</time>
-          <h3>{{ post.title }}</h3>
-          <h5>{{ post.desc }}</h5>
+          <time><span>{{ post.date | date_to_long_string }}</span></time>
+          <h3><span>{{ post.title }}</span></h3>
+          <h5><span>{{ post.desc }}</span></h5>
         </a>
       </li>
       {% endif %} {% endfor %}

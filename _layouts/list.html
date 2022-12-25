@@ -10,7 +10,7 @@ layout: default
       {% for post in site.posts %} {% if post.tag == page.title %}
       <li style="background-image: url('{{ post.img }}')">
         <a href="{{ post.url | relative_url }}">
-          <!-- <time><span>{{ post.date | date_to_long_string }}</span></time> -->
+          <time><span>{{ post.date | date_to_long_string }}</span></time>
           <h3><span>{{ post.title }}</span></h3>
           <h5><span>{{ post.desc }}</span></h5>
         </a>

@@ -143,7 +143,7 @@ section {
   h2 {
     margin: 2rem auto;
     padding: 0.5rem 1rem;
-    width: fit-content;
+    max-width: max-content;
     font-style: italic;
     color: $navy;
     background-color: $yellow;
